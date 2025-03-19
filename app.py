@@ -1,6 +1,5 @@
 import json
 from email import message
-import pandas as pd
 from flask import Flask, jsonify, request, make_response, session
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
@@ -17,10 +16,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'bo
 app.config['JWT_SECRET_KEY'] = 'super-secret' #change IRL
 app.config['SECRET_KEY'] = 'flask-secret' #change IRL
 
-ma = Marshmallow(app)
 db = SQLAlchemy(app)
 jwt = JWTManager(app)
-mail = Mail(app)
 login_manager =LoginManager()
 login_manager.init_app(app)
 
