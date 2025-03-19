@@ -17,13 +17,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'bo
 app.config['JWT_SECRET_KEY'] = 'super-secret' #change IRL
 app.config['SECRET_KEY'] = 'flask-secret' #change IRL
 
-app.config['MAIL_SERVER']='smtp.mailtrap.io'
-app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = '5987602bdfeef8'
-app.config['MAIL_PASSWORD'] = 'd4502ecb7ac807'
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-
 ma = Marshmallow(app)
 db = SQLAlchemy(app)
 jwt = JWTManager(app)
