@@ -16,6 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'bo
 app.config['JWT_SECRET_KEY'] = 'super-secret' #change IRL
 app.config['SECRET_KEY'] = 'flask-secret' #change IRL
 
+ma = Marshmallow(app)
 db = SQLAlchemy(app)
 jwt = JWTManager(app)
 login_manager =LoginManager()
